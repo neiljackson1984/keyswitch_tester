@@ -1,0 +1,36 @@
+{
+    "weGeneratedAJsonFile": false,
+    "millimeter": 1,
+    "inch": 25.4,
+    "mm": 1,
+    "degree": 1,
+    "radian": 57.295779513082,
+    "batteryCompartment": {
+        "batteryCavity": {
+            "extent": {
+                "x": 55,
+                "y": 20,
+                "z": 35
+            }
+        },
+        "lid": {
+            "extent": {
+                "x": 81,
+                "y": 46,
+                "z": 0.2
+            }
+        },
+        "lidPocketOffset": 0.3,
+        "wallThickness": 1.8
+    },
+    "keyswitchTester": {
+        "box": {
+            "extent": {
+                "x": 200,
+                "y": 300,
+                "z": 100
+            },
+            "wallThickness": 4
+        }
+    }
+}
