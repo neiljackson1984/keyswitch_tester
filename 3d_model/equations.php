@@ -88,6 +88,7 @@ if($c->lidBindingScrew->offsetFromEdge < $c->cornerRoundingRadius)
 	$c->lidBindingScrews->interval->y = $c->extent->y - 2*$c->lidBindingScrew->offsetFromEdge;
 }
 
+$c->interiorStrengtheningFillet->radius = 7 * $mm;
 
 unset($c);
 
