@@ -14,7 +14,7 @@ $batteryCompartment = new stdclass;
 $c = $batteryCompartment;
 
 $c->batteryCavity->extent->x = 55 * $mm;
-$c->batteryCavity->extent->y = 20 * $mm;
+$c->batteryCavity->extent->y = 40 * $mm;
 $c->batteryCavity->extent->z = 35 * $mm;
 
 $c->lid->extent->x = $c->batteryCavity->extent->x + 2*13*$mm;
