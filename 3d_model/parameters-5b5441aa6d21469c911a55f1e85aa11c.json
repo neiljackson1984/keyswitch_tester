@@ -6,6 +6,24 @@
     "degree": 1,
     "radian": 57.295779513082,
     "batteryCompartment": {
+        "lidBindingScrew": {
+            "pilotHole": {
+                "diameter": 1
+            },
+            "clampingMeat": {
+                "minimumAllowedDiameter": 10,
+                "minimumAllowedLength": 13
+            },
+            "clearanceHole": {
+                "diameter": 4
+            },
+            "counterSink": {
+                "diameter": 6,
+                "coneAngle": 90
+            },
+            "clampingDiameter": 13
+        },
+        "wallThickness": 1.8,
         "batteryCavity": {
             "extent": {
                 "x": 55,
@@ -15,24 +33,30 @@
         },
         "lid": {
             "extent": {
-                "x": 81,
-                "y": 66,
-                "z": 0.2
-            }
+                "y": 48,
+                "z": 2,
+                "x": 78
+            },
+            "cornerRoundingRadius": 6.5
         },
         "lidPocketOffset": 0.3,
-        "lidPocket": {
-            "extent": {
-                "x": 81.6,
-                "y": 66.6,
-                "z": 0.2
+        "lidBindingScrews": {
+            "interval": {
+                "x": 65,
+                "y": 35
             }
         },
-        "wallThickness": 1.8,
+        "lidPocket": {
+            "extent": {
+                "x": 78.6,
+                "y": 48.6,
+                "z": 2
+            }
+        },
         "extent": {
-            "z": 37,
-            "x": 85.2,
-            "y": 70.2
+            "z": 38.8,
+            "x": 82.2,
+            "y": 52.2
         }
     },
     "keyswitchTester": {
@@ -42,7 +66,32 @@
                 "y": 300,
                 "z": 100
             },
-            "wallThickness": 4
+            "wallThickness": 4,
+            "cornerRoundingRadius": 3,
+            "lidBindingScrew": {
+                "pilotHole": {
+                    "diameter": 1
+                },
+                "clampingMeat": {
+                    "minimumAllowedDiameter": 10,
+                    "minimumAllowedLength": 13
+                },
+                "clearanceHole": {
+                    "diameter": 4
+                },
+                "counterSink": {
+                    "diameter": 6,
+                    "coneAngle": 90
+                },
+                "clampingDiameter": 20,
+                "offsetFromEdge": 10
+            },
+            "lidBindingScrews": {
+                "interval": {
+                    "x": 180,
+                    "y": 280
+                }
+            }
         }
     }
 }
