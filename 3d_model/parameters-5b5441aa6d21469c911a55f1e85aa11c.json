@@ -21,7 +21,19 @@
             }
         },
         "lidPocketOffset": 0.3,
-        "wallThickness": 1.8
+        "lidPocket": {
+            "extent": {
+                "x": 81.6,
+                "y": 46.6,
+                "z": 0.2
+            }
+        },
+        "wallThickness": 1.8,
+        "extent": {
+            "z": 37,
+            "x": 85.2,
+            "y": 50.2
+        }
     },
     "keyswitchTester": {
         "box": {
