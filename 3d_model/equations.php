@@ -10,19 +10,24 @@ $mm = $millimeter;
 $degree = 1;
 $radian = 180/pi();
 
+
+$preferredScrew->pilotHole->diameter = 2.8* $mm;
+$preferredScrew->clampingMeat->minimumAllowedDiameter = 10.5 * $mm;  //clamping meat is a region in the object containing the threaded (pilot) hole.
+$preferredScrew->clampingMeat->minimumAllowedLength = 12 * $mm;
+$preferredScrew->clearanceHole->diameter = 4.4 * $mm;
+$preferredScrew->counterSink->diameter = 7.95 * $mm;
+$preferredScrew->counterSink->coneAngle = 90 * $degree;
+$preferredScrew->clampingDiameter = 12  * $mm; //clamping dimaeter is the diameter of a region in the object containing the clearance hole.
+
+
 $batteryCompartment = new stdclass;
 $c = $batteryCompartment;
 
-$c->lidBindingScrew->pilotHole->diameter = 1* $mm;
-$c->lidBindingScrew->clampingMeat->minimumAllowedDiameter = 10 * $mm;  //clamping meat is a region in the object containing the threaded (pilot) hole.
-$c->lidBindingScrew->clampingMeat->minimumAllowedLength = 13 * $mm;
-$c->lidBindingScrew->clearanceHole->diameter = 4 * $mm;
-$c->lidBindingScrew->counterSink->diameter = 6 * $mm;
-$c->lidBindingScrew->counterSink->coneAngle = 90 * $degree;
-$c->lidBindingScrew->clampingDiameter = 13 * $mm; //clamping dimaeter is the diameter of a region in the object containing the clearance hole.
+$c->lidBindingScrew = clone $preferredScrew;
 
 
-$c->wallThickness = 1.8*$mm;
+
+$c->wallThickness = 3*$mm;
 $c->batteryCavity->extent->x = 55 * $mm;
 $c->batteryCavity->extent->y = 40 * $mm;
 $c->batteryCavity->extent->z = 35 * $mm;
@@ -66,18 +71,13 @@ $c = $keyswitchTester->box;
 $c->extent->x = 200 * $mm;
 $c->extent->y = 300 * $mm;
 $c->extent->z = 100 * $mm;
-$c->wallThickness = 4 * $mm;
-$c->cornerRoundingRadius = 3 * $mm;
+$c->wallThickness = 3.3 * $mm;
+$c->cornerRoundingRadius = 13 * $mm;
 
-$c->lidBindingScrew->pilotHole->diameter = 1* $mm;
-$c->lidBindingScrew->clampingMeat->minimumAllowedDiameter = 10 * $mm;  //clamping meat is a region in the object containing the threaded (pilot) hole.
-$c->lidBindingScrew->clampingMeat->minimumAllowedLength = 13 * $mm;
-$c->lidBindingScrew->clearanceHole->diameter = 4 * $mm;
-$c->lidBindingScrew->counterSink->diameter = 6 * $mm;
-$c->lidBindingScrew->counterSink->coneAngle = 90 * $degree;
-$c->lidBindingScrew->clampingDiameter = 20 * $mm; //clamping dimaeter is the diameter of a region in the object containing the clearance hole.
+$c->lidBindingScrew = clone clone $preferredScrew;
 
 $c->lidBindingScrew->offsetFromEdge = max([$c->lidBindingScrew->clampingMeat->minimumAllowedDiameter/2, $c->lidBindingScrew->clampingDiameter/2]);
+$c->lidBindingScrew->offsetFromEdge = max([$c->lidBindingScrew->offsetFromEdge, $c->cornerRoundingRadius]);
 
 if($c->lidBindingScrew->offsetFromEdge < $c->cornerRoundingRadius)
 {
