@@ -10,7 +10,7 @@
             "diameter": 2.8
         },
         "clampingMeat": {
-            "minimumAllowedDiameter": 10.5,
+            "minimumAllowedDiameter": 10,
             "minimumAllowedLength": 12
         },
         "clearanceHole": {
@@ -28,7 +28,7 @@
                 "diameter": 2.8
             },
             "clampingMeat": {
-                "minimumAllowedDiameter": 10.5,
+                "minimumAllowedDiameter": 10,
                 "minimumAllowedLength": 12
             },
             "clearanceHole": {
@@ -43,37 +43,39 @@
         "wallThickness": 3,
         "batteryCavity": {
             "extent": {
-                "x": 55,
-                "y": 40,
-                "z": 35
+                "x": 18.5,
+                "y": 55,
+                "z": 27.5
             }
         },
         "lid": {
             "extent": {
-                "y": 46,
                 "z": 3.3,
-                "x": 77.5
+                "x": 24.5,
+                "y": 77
             },
             "cornerRoundingRadius": 6
         },
         "lidPocketOffset": 0.7,
+        "lidOverlapThatIsNotDeterminedByMountHoles": 3,
+        "lidMountHoleOrientationSpecifier": "x",
         "lidBindingScrews": {
             "interval": {
-                "x": 65.5,
-                "y": 34
+                "y": 65,
+                "x": 12.5
             }
         },
         "lidPocket": {
             "extent": {
-                "x": 78.9,
-                "y": 47.4,
+                "x": 25.9,
+                "y": 78.4,
                 "z": 3.6
             }
         },
         "extent": {
-            "z": 41.3,
-            "x": 84.9,
-            "y": 53.4
+            "z": 33.8,
+            "x": 31.9,
+            "y": 84.4
         }
     },
     "keyswitchTester": {
@@ -90,7 +92,7 @@
                     "diameter": 2.8
                 },
                 "clampingMeat": {
-                    "minimumAllowedDiameter": 10.5,
+                    "minimumAllowedDiameter": 10,
                     "minimumAllowedLength": 12
                 },
                 "clearanceHole": {
