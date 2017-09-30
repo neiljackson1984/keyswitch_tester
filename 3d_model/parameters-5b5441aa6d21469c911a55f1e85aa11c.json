@@ -80,7 +80,7 @@
     "keyswitchTester": {
         "box": {
             "extent": {
-                "x": 75,
+                "x": 275,
                 "y": 95,
                 "z": 70
             },
@@ -106,7 +106,7 @@
             },
             "lidBindingScrews": {
                 "interval": {
-                    "x": 49,
+                    "x": 249,
                     "y": 69
                 }
             },
