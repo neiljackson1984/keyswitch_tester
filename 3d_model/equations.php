@@ -49,7 +49,7 @@ $c->lid->cornerRoundingRadius = $c->lidBindingScrew->clampingDiameter/2;
 
 $c->lidPocket->extent->x = $c->lid->extent->x + 2*$c->lidPocketOffset;
 $c->lidPocket->extent->y = $c->lid->extent->y + 2*$c->lidPocketOffset;
-$c->lidPocket->extent->z = $c->lid->extent->z;
+$c->lidPocket->extent->z = $c->lid->extent->z + 2*$mm;
 
 $c->extent->z = $c->lid->extent->z + $c->batteryCavity->extent->z + $c->wallThickness;
 $c->extent->x = max([
