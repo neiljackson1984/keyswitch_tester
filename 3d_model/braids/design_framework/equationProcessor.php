@@ -9,7 +9,7 @@ Then it echos all newly defined numeric variables in the solidworks equations fi
 2015-03-29
 */
 
-
+  
 
 //PREAMBLE CODE
 { //PREAMBLE CODE TO NOTE ANY PRE-EXISITING VARIBALE NAMES
@@ -23,7 +23,7 @@ $usageMessage = "nothing";
 $php_errormsg = "nothing";
 $prototypesPath = "";
 $updateClassInstances = false;
-
+$weGeneratedAJsonFile = false;
 $initialNames = array_keys($GLOBALS);
 }
 
