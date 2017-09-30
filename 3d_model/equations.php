@@ -33,10 +33,10 @@ $c->batteryCavity->extent->y = 40 * $mm;
 $c->batteryCavity->extent->z = 35 * $mm;
 
 
-$c->lid->extent->y = $c->batteryCavity->extent->y + 2*4*$mm;
+$c->lid->extent->y = $c->batteryCavity->extent->y + 2*3*$mm;
 $c->lid->extent->z = 2 * $mm;
 
-$c->lidPocketOffset = 0.3 * $mm; //the gap between the walls of the lid pocket and the lid.
+$c->lidPocketOffset = 1 * $mm; //the gap between the walls of the lid pocket and the lid.
 
 
 
@@ -49,7 +49,7 @@ $c->lid->cornerRoundingRadius = $c->lidBindingScrew->clampingDiameter/2;
 
 $c->lidPocket->extent->x = $c->lid->extent->x + 2*$c->lidPocketOffset;
 $c->lidPocket->extent->y = $c->lid->extent->y + 2*$c->lidPocketOffset;
-$c->lidPocket->extent->z = $c->lid->extent->z + 2*$mm;
+$c->lidPocket->extent->z = $c->lid->extent->z + 0.3*$mm;
 
 $c->extent->z = $c->lid->extent->z + $c->batteryCavity->extent->z + $c->wallThickness;
 $c->extent->x = max([

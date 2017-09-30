@@ -50,30 +50,30 @@
         },
         "lid": {
             "extent": {
-                "y": 48,
+                "y": 46,
                 "z": 2,
                 "x": 77.5
             },
             "cornerRoundingRadius": 6
         },
-        "lidPocketOffset": 0.3,
+        "lidPocketOffset": 1,
         "lidBindingScrews": {
             "interval": {
                 "x": 65.5,
-                "y": 36
+                "y": 34
             }
         },
         "lidPocket": {
             "extent": {
-                "x": 78.1,
-                "y": 48.6,
-                "z": 4
+                "x": 79.5,
+                "y": 48,
+                "z": 2.3
             }
         },
         "extent": {
             "z": 40,
-            "x": 84.1,
-            "y": 54.6
+            "x": 85.5,
+            "y": 54
         }
     },
     "keyswitchTester": {
