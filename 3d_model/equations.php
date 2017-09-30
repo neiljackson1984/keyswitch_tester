@@ -34,9 +34,9 @@ $c->batteryCavity->extent->z = 35 * $mm;
 
 
 $c->lid->extent->y = $c->batteryCavity->extent->y + 2*3*$mm;
-$c->lid->extent->z = 2 * $mm;
+$c->lid->extent->z = 3.3  * $mm;
 
-$c->lidPocketOffset = 1 * $mm; //the gap between the walls of the lid pocket and the lid.
+$c->lidPocketOffset = 0.7 * $mm; //the gap between the walls of the lid pocket and the lid.
 
 
 
@@ -68,9 +68,9 @@ unset($c);
 $keyswitchTester = new stdclass;
 $keyswitchTester->box = new stdclass;
 $c = $keyswitchTester->box;
-$c->extent->x = 200 * $mm;
-$c->extent->y = 300 * $mm;
-$c->extent->z = 100 * $mm;
+$c->extent->x = 75 * $mm;
+$c->extent->y = 95 * $mm;
+$c->extent->z = 70 * $mm;
 $c->wallThickness = 3.3 * $mm;
 $c->cornerRoundingRadius = 13 * $mm;
 
