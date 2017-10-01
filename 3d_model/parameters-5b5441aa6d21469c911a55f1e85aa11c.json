@@ -4,13 +4,14 @@
     "mm": 1,
     "degree": 1,
     "radian": 57.295779513082,
+    "newlineForSldworksText": "\r\n",
     "preferredScrew": {
         "pilotHole": {
             "diameter": 2.8
         },
         "clampingMeat": {
-            "minimumAllowedDiameter": 10,
-            "minimumAllowedLength": 12
+            "minimumAllowedDiameter": 12,
+            "minimumAllowedLength": 15
         },
         "clearanceHole": {
             "diameter": 4.4
@@ -21,78 +22,24 @@
         },
         "clampingDiameter": 12
     },
-    "batteryCompartment": {
-        "lidBindingScrew": {
-            "pilotHole": {
-                "diameter": 2.8
-            },
-            "clampingMeat": {
-                "minimumAllowedDiameter": 10,
-                "minimumAllowedLength": 12
-            },
-            "clearanceHole": {
-                "diameter": 4.4
-            },
-            "counterSink": {
-                "diameter": 7.95,
-                "coneAngle": 90
-            },
-            "clampingDiameter": 12
-        },
-        "wallThickness": 3,
-        "batteryCavity": {
-            "extent": {
-                "x": 18.5,
-                "y": 55,
-                "z": 27.5
-            }
-        },
-        "lid": {
-            "extent": {
-                "z": 3.3,
-                "x": 24.5,
-                "y": 77
-            },
-            "cornerRoundingRadius": 6
-        },
-        "lidPocketOffset": 0.7,
-        "lidOverlapThatIsNotDeterminedByMountHoles": 3,
-        "lidMountHoleOrientationSpecifier": "x",
-        "lidBindingScrews": {
-            "interval": {
-                "y": 65,
-                "x": 12.5
-            }
-        },
-        "lidPocket": {
-            "extent": {
-                "x": 25.9,
-                "y": 78.4,
-                "z": 3.6
-            }
-        },
-        "extent": {
-            "z": 33.8,
-            "x": 31.9,
-            "y": 84.4
-        }
-    },
+    "preferredEngravingDepth": 0.7,
     "keyswitchTester": {
         "box": {
+            "wallThickness": 3.3,
+            "textEngravingDepth": 0.7,
             "extent": {
                 "x": 75,
                 "y": 95,
                 "z": 70
             },
-            "wallThickness": 3.3,
             "cornerRoundingRadius": 13,
             "lidBindingScrew": {
                 "pilotHole": {
                     "diameter": 2.8
                 },
                 "clampingMeat": {
-                    "minimumAllowedDiameter": 10,
-                    "minimumAllowedLength": 12
+                    "minimumAllowedDiameter": 12,
+                    "minimumAllowedLength": 15
                 },
                 "clearanceHole": {
                     "diameter": 4.4
@@ -113,6 +60,74 @@
             "interiorStrengtheningFillet": {
                 "radius": 7
             }
+        }
+    },
+    "batteryCompartment": {
+        "lidBindingScrew": {
+            "pilotHole": {
+                "diameter": 2.8
+            },
+            "clampingMeat": {
+                "minimumAllowedDiameter": 12,
+                "minimumAllowedLength": 15
+            },
+            "clearanceHole": {
+                "diameter": 4.4
+            },
+            "counterSink": {
+                "diameter": 7.95,
+                "coneAngle": 90
+            },
+            "clampingDiameter": 12
+        },
+        "wallThickness": 3,
+        "batteryCavity": {
+            "extent": {
+                "z": 18.5,
+                "y": 55,
+                "x": 27.5
+            }
+        },
+        "lid": {
+            "engravedText": {
+                "rawString": "9-VOLT\r\nBATTERY",
+                "lines": [
+                    "9-VOLT",
+                    "BATTERY"
+                ],
+                "fontHeight": 8,
+                "lineSpacingFactor": 1.4,
+                "lineSpacing": 11.2,
+                "textBlockHeight": 19.2,
+                "engravingDepth": 0.7
+            },
+            "extent": {
+                "z": 3.3,
+                "x": 33.5,
+                "y": 79
+            },
+            "cornerRoundingRadius": 6
+        },
+        "lidPocket": {
+            "extent": {
+                "z": 3.6,
+                "x": 34.9,
+                "y": 80.4
+            }
+        },
+        "lidPocketOffset": 0.7,
+        "lidOverlapThatIsNotDeterminedByMountHoles": 3,
+        "lidMountHoleOrientationSpecifier": "x",
+        "lidBindingScrews": {
+            "interval": {
+                "y": 67,
+                "x": 21.5
+            }
+        },
+        "extent": {
+            "z": 24.8,
+            "x": 40.9,
+            "y": 86.4
         }
     }
 }
