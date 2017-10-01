@@ -103,7 +103,7 @@ unset($c);
 $keyswitchTester = new stdclass;
 $keyswitchTester->box = new stdclass;
 $c = $keyswitchTester->box;
-$c->extent->x = 275 * $mm;
+$c->extent->x = 75 * $mm;
 $c->extent->y = 95 * $mm;
 $c->extent->z = 70 * $mm;
 $c->wallThickness = 3.3 * $mm;
