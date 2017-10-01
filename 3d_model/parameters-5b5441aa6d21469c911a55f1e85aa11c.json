@@ -28,9 +28,9 @@
             "wallThickness": 3.3,
             "textEngravingDepth": 0.7,
             "extent": {
-                "x": 75,
-                "y": 95,
-                "z": 70
+                "x": 50,
+                "y": 90,
+                "z": 50
             },
             "cornerRoundingRadius": 13,
             "lidBindingScrew": {
@@ -48,13 +48,13 @@
                     "diameter": 7.95,
                     "coneAngle": 90
                 },
-                "clampingDiameter": 12,
-                "offsetFromEdge": 13
+                "clampingDiameter": 13,
+                "offsetFromEdge": 6.5
             },
             "lidBindingScrews": {
                 "interval": {
-                    "x": 49,
-                    "y": 69
+                    "x": 33.192388155425,
+                    "y": 73.192388155425
                 }
             },
             "interiorStrengtheningFillet": {

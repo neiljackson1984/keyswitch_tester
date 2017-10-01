@@ -106,15 +106,17 @@ $keyswitchTester->box->wallThickness = 3.3 * $mm;
 
 { $c = $keyswitchTester->box;
 	$c->textEngravingDepth = $preferredEngravingDepth;
-	$c->extent->x = 75 * $mm;
-	$c->extent->y = 95 * $mm;
-	$c->extent->z = 70 * $mm;
+	$c->extent->x = 50 * $mm;
+	$c->extent->y = 90 * $mm;
+	$c->extent->z = 50 * $mm;
 	$c->cornerRoundingRadius = 13 * $mm;
 
 	$c->lidBindingScrew = (new DeepCopy())->copy($preferredScrew);
 
+	$c->lidBindingScrew->clampingDiameter = 13 * $mm;
+	
 	$c->lidBindingScrew->offsetFromEdge = max([$c->lidBindingScrew->clampingMeat->minimumAllowedDiameter/2, $c->lidBindingScrew->clampingDiameter/2]);
-	$c->lidBindingScrew->offsetFromEdge = max([$c->lidBindingScrew->offsetFromEdge, $c->cornerRoundingRadius]);
+	//$c->lidBindingScrew->offsetFromEdge = max([$c->lidBindingScrew->offsetFromEdge, $c->cornerRoundingRadius]);
 
 	if($c->lidBindingScrew->offsetFromEdge < $c->cornerRoundingRadius)
 	{
