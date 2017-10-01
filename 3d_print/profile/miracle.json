@@ -12,7 +12,7 @@
    "backlashFeedback" : 0.90,
    "backlashX" : 0.0,
    "backlashY" : 0.090,
-   "bedZOffset" : 0.0,
+   "bedZOffset" : -0.20,
    "bridgeAnchorMinimumLength" : 0.80,
    "bridgeAnchorWidth" : 0.80,
    "bridgeMaximumLength" : 80.0,
@@ -99,7 +99,7 @@
       },
       "firstLayer" : {
          "fanSpeed" : 0.50,
-         "feedrate" : 30.0
+         "feedrate" : 10.0
       },
       "firstLayerRaft" : {
          "fanSpeed" : 0.50,
@@ -139,7 +139,7 @@
       }
    },
    "fanDefaultSpeed" : 0.50,
-   "fanLayer" : 1,
+   "fanLayer" : 2,
    "fanModulationThreshold" : 0.50,
    "fanModulationWindow" : 0.10,
    "fixedLayerStartX" : 0.0,
