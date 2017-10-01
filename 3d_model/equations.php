@@ -26,7 +26,7 @@ $radian = 180/pi();
 $newlineForSldworksText = "\r\n";
 
 {//panelMountM12Connector
-	$panelMountM12Connector->cutout->widthAcrossFlats = 13.5*$mm + 0.6 * $mm; //datasheet recommends 13.5mm
+	$panelMountM12Connector->cutout->widthAcrossFlats = 13.5*$mm + 0.6 * $mm - 0.1 * $mm; //datasheet recommends 13.5mm
 	$panelMountM12Connector->cutout->diameter = 16 * $mm;
 	$panelMountM12Connector->minimumAllowedLocalPanelThickness = 2.3 * $mm;
 	$panelMountM12Connector->maximumAllowedLocalPanelThickness = 3.6 * $mm;
