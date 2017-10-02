@@ -7,7 +7,7 @@
     "newlineForSldworksText": "\r\n",
     "panelMountM12Connector": {
         "cutout": {
-            "widthAcrossFlats": 14.1,
+            "widthAcrossFlats": 14,
             "diameter": 16
         },
         "minimumAllowedLocalPanelThickness": 2.3,
