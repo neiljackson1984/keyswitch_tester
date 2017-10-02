@@ -12,7 +12,7 @@
    "backlashFeedback" : 0.90,
    "backlashX" : 0.0,
    "backlashY" : 0.090,
-   "bedZOffset" : -0.6,
+   "bedZOffset" : -0.660,
    "bridgeAnchorMinimumLength" : 0.80,
    "bridgeAnchorWidth" : 0.80,
    "bridgeMaximumLength" : 80.0,
@@ -45,7 +45,7 @@
    "doMixedRaft" : false,
    "doMixedSupport" : false,
    "doOutlines" : true,
-   "doPrintLayerMessages" : false,
+   "doPrintLayerMessages" : true,
    "doPrintProgress" : true,
    "doPurgeWall" : false,
    "doRaft" : false,
@@ -99,7 +99,7 @@
       },
       "firstLayer" : {
          "fanSpeed" : 0.50,
-         "feedrate" : 10.0
+         "feedrate" : 6.0
       },
       "firstLayerRaft" : {
          "fanSpeed" : 0.50,
@@ -139,7 +139,7 @@
       }
    },
    "fanDefaultSpeed" : 0.50,
-   "fanLayer" : 2,
+   "fanLayer" : 1,
    "fanModulationThreshold" : 0.50,
    "fanModulationWindow" : 0.10,
    "fixedLayerStartX" : 0.0,
@@ -149,7 +149,7 @@
    "floorSurfaceThickness" : 0,
    "floorThickness" : 0.8000000119209290,
    "gridSpacingMultiplier" : 0.990,
-   "infillDensity" : 0.4000000059604645,
+   "infillDensity" : 0.3000000119209290,
    "infillOrientationInterval" : 90,
    "infillOrientationOffset" : 0,
    "infillOrientationRange" : 90,
@@ -169,7 +169,7 @@
    "minSpurWidth" : 0.120,
    "minThickInfillImprovement" : 1.0,
    "modelFillProfiles" : {},
-   "numberOfShells" : 3,
+   "numberOfShells" : 2,
    "purgeBucketSide" : 4.0,
    "purgeWallBaseFilamentWidth" : 2.0,
    "purgeWallBasePatternLength" : 10.0,
