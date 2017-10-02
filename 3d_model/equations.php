@@ -26,19 +26,21 @@ $radian = 180/pi();
 $newlineForSldworksText = "\r\n";
 
 {//panelMountM12Connector
-	$panelMountM12Connector->cutout->widthAcrossFlats = 13.5*$mm + 0.6 * $mm - 0.1 * $mm; //datasheet recommends 13.5mm
+	$panelMountM12Connector->cutout->widthAcrossFlats = 13.95 * $mm; //datasheet recommends 13.5mm
 	$panelMountM12Connector->cutout->diameter = 16 * $mm;
-	$panelMountM12Connector->minimumAllowedLocalPanelThickness = 2.3 * $mm;
-	$panelMountM12Connector->maximumAllowedLocalPanelThickness = 3.6 * $mm;
+	$panelMountM12Connector->minimumAllowedLocalPanelThicknessBelowFlange = 3.1 * $mm;
+	$panelMountM12Connector->maximumAllowedLocalPanelThicknessBelowFlange = 3.6 * $mm;
 	$panelMountM12Connector->localPanelNeighborhood->diameter = 23.3 * $mm; //a circle of this diameter will be big enough to allow the nut to spin freely.
+	$panelMountM12Connector->flangeSinkDepthBelowPanelExterior = 2* $mm;
+	$panelMountM12Connector->flangePocketClearance = 0.3* $mm;
 }
 
 { //preferredScrew: 
-	$preferredScrew->pilotHole->diameter = 3* $mm;
+	$preferredScrew->pilotHole->diameter = 3.1* $mm;
 	$preferredScrew->clampingMeat->minimumAllowedDiameter = 12 * $mm;  //clamping meat is a region in the object containing the threaded (pilot) hole.
 	$preferredScrew->clampingMeat->minimumAllowedLength = 15 * $mm;
 	$preferredScrew->clearanceHole->diameter = 4.4 * $mm;
-	$preferredScrew->counterSink->diameter = 7.95 * $mm + 0.1 * $mm;
+	$preferredScrew->counterSink->diameter = 8.3 * $mm;//7.95 * $mm + 0.1 * $mm;
 	$preferredScrew->counterSink->coneAngle = 90 * $degree;
 	$preferredScrew->clampingDiameter = 12  * $mm; //clamping dimaeter is the diameter of a region in the object containing the clearance hole.
 }
