@@ -49,6 +49,34 @@ $newlineForSldworksText = "\r\n";
 	$preferredScrew->clampingDiameter = 12  * $mm; //clamping dimaeter is the diameter of a region in the object containing the clearance hole.
 }
 
+{
+	
+	$m4Threads->closeFitClearanceDiameter = 0.257 * $inch + 0.5 * $mm;
+	//$m4Threads->pitchDiameter = 3.8 * $mm; //this is purely cosmetic for the model on screen - has no bearing on the output solid of iterest.
+	$m4Threads->majorDiameter = 4 * $mm; //this is purely cosmetic for the model on screen - has no bearing on the output solid of iterest.
+	$m4Threads->pilotHoleDiameter = 3.3 * $mm;
+	$m4Threads->pitch = 0.7 * $mm;
+
+
+	$m4HexNut->threads = $m4Threads;
+	$m4HexNut->diameterAcrossFlats = 7 * $mm;
+	$m4HexNut->thickness = 3.2 * $mm;
+
+
+	$embeddableNut->nut = $m4HexNut;
+	$embeddableNut->nutCaveThickness = $embeddableNut->nut->thickness + 1.0*$mm;
+	$embeddableNut->embedmentCylinder->diameter = 2 * $embeddableNut->nut->diameterAcrossFlats;
+	$embeddableNut->embedmentCylinder->height = 2.8 * $embeddableNut->nut->thickness;
+	$embeddableNut->nutChamberMargin = 0.4 * $mm;
+	$embeddableNut->nutCaveToolLength = 5 * $embeddableNut->nut->diameterAcrossFlats;
+	$embeddableNut->retentionBarb->prominence = $embeddableNut->nutChamberMargin + 0.15 * $mm;
+	$embeddableNut->retentionBarb->lockAngle = 60 * $degree;
+	$embeddableNut->retentionBarb->rampAngle = 35 * $degree;
+	$embeddableNut->retentionBarb->peakRoundingRadius = 1/5 * $embeddableNut->retentionBarb->prominence;
+	$embeddableNut->plugMask->offset = 0.003 * $inch; //this is the gap to leave between the walls of the nut slot and the surface of the plug which will stick into the nut slot.
+
+}
+
 $preferredEngravingDepth = 0.7 * $mm;
 
 $keyswitchTester = new stdclass;
