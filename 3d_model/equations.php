@@ -35,6 +35,10 @@ $newlineForSldworksText = "\r\n";
 	$panelMountM12Connector->flangePocketClearance = 0.3* $mm;
 }
 
+{//panelMountLED
+	$panelMountLED->protrusionBeyondPanel = 0 * $mm;
+}
+
 { //preferredScrew: 
 	$preferredScrew->pilotHole->diameter = 3.1* $mm;
 	$preferredScrew->clampingMeat->minimumAllowedDiameter = 12 * $mm;  //clamping meat is a region in the object containing the threaded (pilot) hole.

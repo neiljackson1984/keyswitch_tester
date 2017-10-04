@@ -18,6 +18,9 @@
         "flangeSinkDepthBelowPanelExterior": 2,
         "flangePocketClearance": 0.3
     },
+    "panelMountLED": {
+        "protrusionBeyondPanel": 0
+    },
     "preferredScrew": {
         "pilotHole": {
             "diameter": 3.1
