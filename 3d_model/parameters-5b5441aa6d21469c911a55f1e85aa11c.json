@@ -13,10 +13,10 @@
         "minimumAllowedLocalPanelThicknessBelowFlange": 3.1,
         "maximumAllowedLocalPanelThicknessBelowFlange": 3.6,
         "localPanelNeighborhood": {
-            "diameter": 23.3
+            "diameter": 22.1
         },
         "flangeSinkDepthBelowPanelExterior": 2,
-        "flangePocketClearance": 0.3
+        "flangePocketClearance": 0.05
     },
     "panelMountLED": {
         "protrusionBeyondPanel": 0
@@ -30,7 +30,7 @@
             "minimumAllowedLength": 15
         },
         "clearanceHole": {
-            "diameter": 4.4
+            "diameter": 4.35
         },
         "counterSink": {
             "diameter": 8.3,
@@ -39,14 +39,14 @@
         "clampingDiameter": 12
     },
     "m4Threads": {
-        "closeFitClearanceDiameter": 7.0278,
+        "closeFitClearanceDiameter": 4.1,
         "majorDiameter": 4,
         "pilotHoleDiameter": 3.3,
         "pitch": 0.7
     },
     "m4HexNut": {
         "threads": {
-            "closeFitClearanceDiameter": 7.0278,
+            "closeFitClearanceDiameter": 4.1,
             "majorDiameter": 4,
             "pilotHoleDiameter": 3.3,
             "pitch": 0.7
@@ -57,13 +57,16 @@
     "embeddableNut": {
         "nut": {
             "threads": {
-                "closeFitClearanceDiameter": 7.0278,
+                "closeFitClearanceDiameter": 4.1,
                 "majorDiameter": 4,
                 "pilotHoleDiameter": 3.3,
                 "pitch": 0.7
             },
             "diameterAcrossFlats": 7,
             "thickness": 3.2
+        },
+        "screwClearanceHole": {
+            "diameter": 4.35
         },
         "nutCaveThickness": 4.2,
         "embedmentCylinder": {
@@ -102,7 +105,7 @@
                     "minimumAllowedLength": 15
                 },
                 "clearanceHole": {
-                    "diameter": 4.4
+                    "diameter": 4.35
                 },
                 "counterSink": {
                     "diameter": 8.3,
@@ -122,7 +125,7 @@
             }
         }
     },
-    "batteryCompartment": {
+    "panelHostedBatteryCompartment": {
         "lidBindingScrew": {
             "pilotHole": {
                 "diameter": 3.1
@@ -132,7 +135,7 @@
                 "minimumAllowedLength": 15
             },
             "clearanceHole": {
-                "diameter": 4.4
+                "diameter": 4.35
             },
             "counterSink": {
                 "diameter": 8.3,
@@ -188,6 +191,9 @@
             "z": 24.8,
             "x": 40.9,
             "y": 86.4
+        },
+        "wireHole": {
+            "diameter": 2.3
         }
     }
 }

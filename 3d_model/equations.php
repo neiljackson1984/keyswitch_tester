@@ -30,9 +30,9 @@ $newlineForSldworksText = "\r\n";
 	$panelMountM12Connector->cutout->diameter = 16 * $mm;
 	$panelMountM12Connector->minimumAllowedLocalPanelThicknessBelowFlange = 3.1 * $mm;
 	$panelMountM12Connector->maximumAllowedLocalPanelThicknessBelowFlange = 3.6 * $mm;
-	$panelMountM12Connector->localPanelNeighborhood->diameter = 23.3 * $mm; //a circle of this diameter will be big enough to allow the nut to spin freely.
+	$panelMountM12Connector->localPanelNeighborhood->diameter = 22.1 * $mm; //a circle of this diameter will be big enough to allow the nut to spin freely.
 	$panelMountM12Connector->flangeSinkDepthBelowPanelExterior = 2* $mm;
-	$panelMountM12Connector->flangePocketClearance = 0.3* $mm;
+	$panelMountM12Connector->flangePocketClearance = 0.05* $mm;
 }
 
 {//panelMountLED
@@ -43,17 +43,15 @@ $newlineForSldworksText = "\r\n";
 	$preferredScrew->pilotHole->diameter = 3.1* $mm;
 	$preferredScrew->clampingMeat->minimumAllowedDiameter = 12 * $mm;  //clamping meat is a region in the object containing the threaded (pilot) hole.
 	$preferredScrew->clampingMeat->minimumAllowedLength = 15 * $mm;
-	$preferredScrew->clearanceHole->diameter = 4.4 * $mm;
+	$preferredScrew->clearanceHole->diameter = 4.35 * $mm;
 	$preferredScrew->counterSink->diameter = 8.3 * $mm;//7.95 * $mm + 0.1 * $mm;
 	$preferredScrew->counterSink->coneAngle = 90 * $degree;
 	$preferredScrew->clampingDiameter = 12  * $mm; //clamping dimaeter is the diameter of a region in the object containing the clearance hole.
 }
 
-{
-	
-	$m4Threads->closeFitClearanceDiameter = 0.257 * $inch + 0.5 * $mm;
-	//$m4Threads->pitchDiameter = 3.8 * $mm; //this is purely cosmetic for the model on screen - has no bearing on the output solid of iterest.
-	$m4Threads->majorDiameter = 4 * $mm; //this is purely cosmetic for the model on screen - has no bearing on the output solid of iterest.
+{ //embeddableNut
+	$m4Threads->closeFitClearanceDiameter = 4.1 * $mm;
+	$m4Threads->majorDiameter = 4 * $mm;
 	$m4Threads->pilotHoleDiameter = 3.3 * $mm;
 	$m4Threads->pitch = 0.7 * $mm;
 
@@ -64,6 +62,7 @@ $newlineForSldworksText = "\r\n";
 
 
 	$embeddableNut->nut = $m4HexNut;
+	$embeddableNut->screwClearanceHole->diameter = 4.35 * $mm;
 	$embeddableNut->nutCaveThickness = $embeddableNut->nut->thickness + 1.0*$mm;
 	$embeddableNut->embedmentCylinder->diameter = 2 * $embeddableNut->nut->diameterAcrossFlats;
 	$embeddableNut->embedmentCylinder->height = 2.8 * $embeddableNut->nut->thickness;
@@ -73,18 +72,18 @@ $newlineForSldworksText = "\r\n";
 	$embeddableNut->retentionBarb->lockAngle = 60 * $degree;
 	$embeddableNut->retentionBarb->rampAngle = 35 * $degree;
 	$embeddableNut->retentionBarb->peakRoundingRadius = 1/5 * $embeddableNut->retentionBarb->prominence;
-	$embeddableNut->plugMask->offset = 0.003 * $inch; //this is the gap to leave between the walls of the nut slot and the surface of the plug which will stick into the nut slot.
-
+	//$embeddableNut->plugMask->offset = 0.003 * $inch; //this is the gap to leave between the walls of the nut slot and the surface of the plug which will stick into the nut slot.
+	
 }
 
 $preferredEngravingDepth = 0.7 * $mm;
 
 $keyswitchTester = new stdclass;
 $keyswitchTester->box = new stdclass;
-$batteryCompartment = new stdclass;
+$panelHostedBatteryCompartment = new stdclass;
 $keyswitchTester->box->wallThickness = 3.3 * $mm;
 
-{ $c = $batteryCompartment;
+{ $c = $panelHostedBatteryCompartment;
 	
 	$c->lidBindingScrew = (new DeepCopy())->copy($preferredScrew);
 
@@ -142,6 +141,9 @@ $keyswitchTester->box->wallThickness = 3.3 * $mm;
 		$c->batteryCavity->extent->y + 2*$c->wallThickness,
 		$c->lidPocket->extent->y + 2*$c->wallThickness
 	]);
+	
+	$c->wireHole->diameter = 2.3 * $mm;
+	
 	unset($c);
 }
 
